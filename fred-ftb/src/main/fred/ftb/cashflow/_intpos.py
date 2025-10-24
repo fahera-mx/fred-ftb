@@ -76,5 +76,5 @@ class PCFProjectStruct(ProjectStructInterface[int]):
             base = dt.date.fromisoformat(base)
         struct = XCFProjectStruct.empty()
         for cf in self.flows.values():
-            struct = struct.add_cashflow(cf.to_xcf(reference_date=base, as_current=False))
+            struct = struct.register_cashflow(cf.to_xcf(reference_date=base, as_current=False))
         return struct

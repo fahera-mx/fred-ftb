@@ -6,7 +6,7 @@ from setuptools import setup, find_namespace_packages
 
 CODEBASE_PATH = os.environ.get(
     "CODEBASE_PATH",
-    default=os.path.join("src", "main"),
+    os.path.join("src", "main"),
 )
 
 with open("requirements.txt", "r") as file:

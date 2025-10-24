@@ -222,7 +222,7 @@ class ProjectStructInterface[T]:
 
     def merge(self, other: 'ProjectStructInterface') -> 'ProjectStructInterface':
         for cf in other.flows.values():
-            self.register(cf)
+            self.register_cashflow(cf)
         return self
 
     def __add__(self, other: 'ProjectStructInterface') -> 'ProjectStructInterface':
